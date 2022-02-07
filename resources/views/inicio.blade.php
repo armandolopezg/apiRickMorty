@@ -47,9 +47,9 @@
                     </div>
 
                     @foreach($personajes as $personaje)
-                    <div class="container mt-5">
-                        <div class="col-md-4">
-                            <div class="free-div">
+                    <div class="container mt-1">
+                        <div class="col-lg-8">
+                            <div class="card mb-4">
                                 <a href="#!"><img class="card-img-top" src="{{$personaje['imagen']}}" alt="..." /></a>
                                 <div class="card-body">
                                     <div class="card-title h4">{{$personaje['nombre']}}</div>
@@ -64,6 +64,8 @@
                     </div>
                     <br> </br>
                     @endforeach
+
+
                 </div>
             </div>
         </div>

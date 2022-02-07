@@ -29,7 +29,7 @@
                         <header class="mb-4">
                             <h1 class="fw-bolder mb-1">{{$personaje['name']}}</h1>
                             <a class="badge bg-secondary text-decoration-none link-light" >{{$personaje['gender']}}</a>
-                            <a class="badge bg-secondary text-decoration-none link-light" href=>{{$personaje['species']}}</a>
+                            <a class="badge bg-secondary text-decoration-none link-light" >{{$personaje['species']}}</a>
                         </header>
                         <figure class="mb-4"><img class="img-fluid rounded" src="{{$personaje['image']}}" alt="..." /></figure>
                         <section class="mb-5">
@@ -49,17 +49,16 @@
                     </section>
                 </div>
 
-           
-                    <div class="card mb-1">
+                <div class="center">
+                    <div class="card-lg-4">
                         <div class="card-header">Personaje Aleatorio</div>
                         <div class="card-body">
                             <div class="input-group">
-
                             @foreach($personajes as $personaje)
                             @if($loop->index < 4)
                             <div class="row">
                         <div class="col-8">
-                            <div class="card mb-4">
+                            <div class="card mb-8">
                                 <a href="{{route('post',$personaje['id'])}}"><img class="card-img-top" src="{{$personaje['imagen']}}" alt="..." /></a>
                                 <div class="card-body">
                                     <h1 class="small text">{{$personaje['nombre']}}</h1>
@@ -73,6 +72,10 @@
                     </div>
                     @endif
                     @endforeach
+                
+
+
+
                             </div>
                         </div>
                     </div>
